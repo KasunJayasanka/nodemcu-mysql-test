@@ -58,10 +58,10 @@
 </head>
 <body>
     <?php
-        $host = "localhost";  // host = localhost because database hosted on the same server where PHP files are hosted
-        $dbname = "nodemcusensor";  // Database name
-        $username = "arduino";  // Database username
-        $password = "admin"; // Database password
+        $host = "eu-cdbr-west-03.cleardb.net";  // host = localhost because database hosted on the same server where PHP files are hosted
+        $dbname = "heroku_cc37febd15469e6";  // Database name
+        $username = "bc198622e1365c";  // Database username
+        $password = "f0e73a72"; // Database password
         // Establish connection to MySQL database
         $conn = new mysqli($host, $username, $password, $dbname);
         // Check if connection established successfully
