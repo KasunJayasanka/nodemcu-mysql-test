@@ -7,7 +7,7 @@
     $password = "f0e73a72";                // Database password
     $api_key_value = "tPmAT5Ab3j7F9";
 
-    $api_key="";
+    $api_key= $sendval=$randomnumber="";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $api_key = test_input($_POST["api_key"]);
