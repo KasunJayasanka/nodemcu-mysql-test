@@ -23,11 +23,7 @@
         } else {
             echo "Connected to mysql database. ";
         }
-
-        if(!empty($_POST['sendval'])){
-        // "sendval" and "sendval2" are query parameters accessed from the HTTP POST Request made by the NodeMCU.
-            //$randomnumber = $_POST['sendval'];
-        // Update your tablename here
+        
         // A SQL query to insert data into table -> INSERT INTO table_name (col1, col2, ..., colN) VALUES (' " .$col1. " ', '".col2."', ..., ' ".colN." ')
                 $sql = "INSERT INTO sensorreadings VALUES ('".$randomnumber."')";
                         if ($conn->query($sql) === TRUE) {
@@ -36,7 +32,7 @@
                         } else {
                             echo "Error: " . $sql . "<br>" . $conn->error;
                         }
-            }
+            
     
         $conn->close();
     }
