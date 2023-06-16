@@ -107,7 +107,7 @@ if ($conn->connect_error) {
 }
 
 // Prepare the SQL statement
-$sql = "INSERT INTO your_table_name (sensor1, sensor2, sensor3, sensor4) VALUES ('$sensor1', '$sensor2', '$sensor3', '$sensor4')";
+$sql = "INSERT INTO sensorreadings (sensor1, sensor2, sensor3, sensor4) VALUES ('$sensor1', '$sensor2', '$sensor3', '$sensor4')";
 
 // Execute the SQL statement
 if ($conn->query($sql) === true) {
