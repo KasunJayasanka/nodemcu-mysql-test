@@ -69,7 +69,7 @@
             die("Connection failed: " . $conn->connect_error);
         }
         // Query the single latest entry from the database. -> SELECT * FROM table_name ORDER BY col_name DESC LIMIT 1
-        $sql = "SELECT * FROM nodemcu_table";
+        $sql = "SELECT * FROM nodemcu_table ORDER BY id DESC LIMIT 1";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             //Will come handy if we later want to fetch multiple rows from the table
