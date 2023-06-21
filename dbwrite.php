@@ -18,15 +18,15 @@ $apiKey = $sensorValue1 = $sensorValue2 = $sensorValue3 = $sensorValue4 = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
-    $json = file_get_contents('php://input');
-    $data = json_decode($json, true);
-    $apiKey = test_input($data["apiKey"]);
+    // $json = file_get_contents('php://input');
+    // $data = json_decode($json, true);
+    $apiKey = test_input($_GET["apiKey"]);
 
         if($apiKey == $api_key_value){
-            $sensorValue1 = test_input($data["sensorValue1"]);
-            $sensorValue2 = test_input($data["sensorValue2"]);
-            $sensorValue3 = test_input($data["sensorValue3"]);
-            $sensorValue4 = test_input($data["sensorValue4"]);
+            $sensorValue1 = test_input($_GET["sensorValue1"]);
+            $sensorValue2 = test_input($_GET["sensorValue2"]);
+            $sensorValue3 = test_input($_GET["sensorValue3"]);
+            $sensorValue4 = test_input($_GET["sensorValue4"]);
         }else{
             echo $apiKey."Wrong API Key provided!";
             return;
