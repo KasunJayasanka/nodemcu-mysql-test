@@ -14,7 +14,7 @@
             padding: 0;
         }
         body {
-            background: url('/bg.jpeg') no-repeat center center;
+            background: url('/img/bg.jpg') no-repeat center center;
             background-attachment: fixed;
             background-size: cover;
             display: grid;
