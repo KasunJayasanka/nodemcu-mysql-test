@@ -29,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $sensorValue4 = test_input($data["sensorValue4"]);
         }else{
             echo "Wrong API Key provided!";
+            echo $apiKey;
             return;
         }
 
