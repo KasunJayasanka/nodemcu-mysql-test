@@ -33,7 +33,7 @@
                 text-align:center;
                 padding: 5rem;
             font-size:40px;
-                color: white;
+                color: black;
         }
         .container:before {
             content: "";
