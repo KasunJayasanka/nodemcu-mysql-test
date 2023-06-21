@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $sql = '';
 
         // Select group of the session
-        $sql = "INSERT INTO nodemcu_table VALUES ('".$sensorValue1."','".$sensorValue2."', '".$sensorValue3."', '".$sensorValue4."')";
+        $sql = "INSERT INTO nodemcu_table (sensorValue1,sensorValue2,sensorValue3,sensorValue4) VALUES ('".$sensorValue1."','".$sensorValue2."', '".$sensorValue3."', '".$sensorValue4."')";
         
         if ($conn->query($sql) === true)
         {
