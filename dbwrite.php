@@ -16,7 +16,7 @@ $api_key_value = "tPmAT5Ab3j7F9";
 
 $apiKey = $sensorValue1 = $sensorValue2 = $sensorValue3 = $sensorValue4 = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
     $json = file_get_contents('php://input');
     $data = json_decode($json, true);
@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $conn->close();
 
 }else{
-    echo 'No POST Request has been received!';
+    echo 'No GET Request has been received!';
 }
 
 function test_input($data) {
