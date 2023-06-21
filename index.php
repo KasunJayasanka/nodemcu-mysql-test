@@ -69,7 +69,7 @@
             die("Connection failed: " . $conn->connect_error);
         }
         // Query the single latest entry from the database. -> SELECT * FROM table_name ORDER BY col_name DESC LIMIT 1
-        $sql = "SELECT * FROM sensorreadings ORDER BY id DESC LIMIT 1";
+        $sql = "SELECT * FROM nodemcu_table";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             //Will come handy if we later want to fetch multiple rows from the table
@@ -77,10 +77,27 @@
                 //Returning HTML from the server to show on the webpage.
                 echo '<div class="container">';
                 echo '<h1>NodeMCU Data Logging</h1>';
+                                                  
                 echo '<p>';
-                echo '   <span class="dht-labels">Temperature = </span>';
-                echo '   <span id="temperature">'.$row["value"].' &#8451</span>';
+                echo '   <span class="dht-labels">sensorValue1 = </span>';
+                echo '   <span id="temperature">'.$row["sensorValue1"].' &#8451</span>';
                 echo ' </p>';
+                                                  
+                echo '<p>';                               
+                echo '   <span class="dht-labels">sensorValue2 = </span>';
+                echo '   <span id="temperature">'.$row["sensorValue2"].' &#8451</span>';
+                echo ' </p>';
+
+                echo '<p>';                               
+                echo '   <span class="dht-labels">sensorValue3 = </span>';
+                echo '   <span id="temperature">'.$row["sensorValue3"].' &#8451</span>';
+                echo ' </p>';
+
+                echo '<p>';                               
+                echo '   <span class="dht-labels">sensorValue4 = </span>';
+                echo '   <span id="temperature">'.$row["sensorValue4"].' &#8451</span>';
+                echo ' </p>';
+                                                  
                 echo '</div>';
             }
         } else {
